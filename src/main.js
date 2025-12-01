@@ -92,7 +92,7 @@ const renderHome = () => {
     <div style="display: flex; flex-direction: column; justify-content: center; min-height: calc(100vh - 140px); padding: 1rem 0;">
       
       <!-- Top Section: Hero + Guarantee -->
-      <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: center; margin-bottom: 5rem;">
+      <div class="hero-section">
         
         <!-- Hero Text -->
         <div style="text-align: left;">
@@ -102,7 +102,7 @@ const renderHome = () => {
           <p style="font-size: 1.1rem; color: var(--color-text-light); margin-bottom: 2rem; max-width: 500px;">
             Donify connects you directly to local shelters. Shop for essentials online and have them delivered to those in need.
           </p>
-          <div style="display: flex; gap: 1rem;">
+          <div class="btn-container" style="display: flex; gap: 1rem;">
             <button class="btn btn-primary" id="btn-start-giving">Start Giving</button>
             <button class="btn btn-secondary">Learn More</button>
           </div>
@@ -138,7 +138,8 @@ const renderHome = () => {
       </div>
       
       <!-- Feature Cards -->
-      <section class="features" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; padding: 0;">
+      <!-- Feature Cards -->
+      <section class="features-grid" style="padding: 0;">
         <!-- Card 1: Mint BG, Purple Text -->
         <div class="feature-card" style="padding: 1.5rem; background: var(--color-mint); border-radius: 12px; box-shadow: var(--shadow); text-align: center; color: #8e6aa0;">
           <h3 style="color: #8e6aa0; margin-bottom: 0.5rem; font-size: 1.1rem;">Shop Essentials</h3>
@@ -234,7 +235,7 @@ const renderAbout = () => {
         </p>
       </div>
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+      <div class="about-grid">
         <div style="background: #fff; padding: 2rem; border-radius: 8px; box-shadow: var(--shadow);">
           <h4 style="color: var(--color-accent); margin-bottom: 0.5rem;">For Donors</h4>
           <p style="font-size: 0.9rem; color: var(--color-text-light);">
@@ -282,7 +283,7 @@ const renderCheckout = () => {
   }
 
   mainContent.innerHTML = `
-    <section style="padding: 2rem 0; max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+    <section class="checkout-grid">
       
       <!-- Checkout Form -->
       <div>
@@ -371,7 +372,7 @@ const renderPantry = () => {
   mainContent.innerHTML = `
     <section style="padding: 2rem 0;">
       <h2 style="text-align: center; margin-bottom: 2rem;">Online Pantry</h2>
-      <div class="pantry-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 2rem;">
+      <div class="pantry-grid">
         <!-- Items -->
         ${[
       { name: 'Canned Beans', price: '$1.50', img: `${import.meta.env.BASE_URL}images/beans.png` },
