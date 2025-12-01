@@ -4,7 +4,7 @@ document.querySelector('#app').innerHTML = `
   <div class="container">
     <header>
       <div class="logo">
-        <img src="/logo.png" alt="Donify Logo" style="height: 80px; width: auto; mix-blend-mode: multiply; filter: brightness(1.08);">
+        <img src="${import.meta.env.BASE_URL}logo.png" alt="Donify Logo" style="height: 80px; width: auto; mix-blend-mode: multiply; filter: brightness(1.08);">
       </div>
       <nav>
         <ul>
@@ -374,12 +374,12 @@ const renderPantry = () => {
       <div class="pantry-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 2rem;">
         <!-- Items -->
         ${[
-      { name: 'Canned Beans', price: '$1.50', img: '/images/beans.png' },
-      { name: 'Toothpaste', price: '$3.00', img: '/images/toothpaste.png' },
-      { name: 'Warm Socks', price: '$5.00', img: '/images/socks.png' },
-      { name: 'Baby Formula', price: '$20.00', img: '/images/formula.png' },
-      { name: 'Rice (5lb)', price: '$4.50', img: '/images/rice.png' },
-      { name: 'Shampoo', price: '$4.00', img: '/images/shampoo.png' },
+      { name: 'Canned Beans', price: '$1.50', img: `${import.meta.env.BASE_URL}images/beans.png` },
+      { name: 'Toothpaste', price: '$3.00', img: `${import.meta.env.BASE_URL}images/toothpaste.png` },
+      { name: 'Warm Socks', price: '$5.00', img: `${import.meta.env.BASE_URL}images/socks.png` },
+      { name: 'Baby Formula', price: '$20.00', img: `${import.meta.env.BASE_URL}images/formula.png` },
+      { name: 'Rice (5lb)', price: '$4.50', img: `${import.meta.env.BASE_URL}images/rice.png` },
+      { name: 'Shampoo', price: '$4.00', img: `${import.meta.env.BASE_URL}images/shampoo.png` },
     ].map(item => `
           <div class="item-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow);">
             <img src="${item.img}" alt="${item.name}" style="width: 100%; height: 200px; object-fit: cover;">
